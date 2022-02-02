@@ -1,27 +1,10 @@
-const phones=[
-    {
-        name:'symphone',
-        price:5000,
-        ram:2,
-        camera:6
-    },
-    {
-        name:'samsung',
-        price:8000,
-        ram:4,
-        camera:8
-    },
-    {
-        name:'htc',
-        price:1500,
-        ram:4,
-        camera:7
-    }
+const products=[
+    {nsme:'phone', price:1000,},
+    {nsme:'shirt', price:500,},
+    {nsme:'laptop', price:20000,}
 ]
-let cheapest=phones[0];
-for(const phone of phones){
-    if(phone.ram<cheapest.ram){
-        cheapest=phone;
-    }
+let totalPrice=0;
+for(const product of products){
+    totalPrice=totalPrice+product.price;
 }
-console.log(cheapest);
+console.log('your total shope price =',totalPrice);
