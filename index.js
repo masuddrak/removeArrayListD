@@ -1,12 +1,27 @@
-
-for(let i=1; i<=30; i++){
-    if(i%3==0 && i%5==0){
-        console.log("its best",i);
+const phones=[
+    {
+        name:'symphone',
+        price:5000,
+        ram:2,
+        camera:6
+    },
+    {
+        name:'samsung',
+        price:8000,
+        ram:4,
+        camera:8
+    },
+    {
+        name:'htc',
+        price:1500,
+        ram:4,
+        camera:7
     }
-    else if(i%3==0){
-        console.log('good',i)
-    }
-    else{
-        console.log(i);
+]
+let cheapest=phones[0];
+for(const phone of phones){
+    if(phone.ram<cheapest.ram){
+        cheapest=phone;
     }
 }
+console.log(cheapest);
