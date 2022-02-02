@@ -1,12 +1,14 @@
-const names=['abul', 'kabul','jabul','kabul','rana'];
+function woodCalculator(chair,table,bed){
+    const perChairWood=3;
+    const perTableWood=10;
+    const perBedWood=50;
 
-function removeDuplict(names){
-    const unique=[];
-    for(const element of names){
-        if(unique.indexOf(element)==-1){
-            unique.push(element);
-        }
-    }return unique;
+    const chairQuantityWood=chair*perChairWood;
+    const tableQuantityWood=table*perTableWood;
+    const bedQuantityWood=bed*perBedWood;
+
+    const totalWood=chairQuantityWood+tableQuantityWood+bedQuantityWood;
+    return totalWood;
 }
-var result=removeDuplict(names);
+const result=woodCalculator(0,0,2);
 console.log(result);
